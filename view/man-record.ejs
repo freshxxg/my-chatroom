@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>聊天记录管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel='stylesheet' href='/bootstrap.min.css'/>
+    <link rel="stylesheet" href="/record.css">
+    <script src='/jquery.min.js'></script>
+    <script src="/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li><a href="/admin/record">聊天记录管理</a></li>
+            <li><a href="/admin/">用户管理</a></li>
+            <li><a href="/admin/login">退出</a></li>
+        </ul>
+        <h3>聊天记录管理</h3>
+        <!-- 弹出框 -->
+        <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                <h4>聊天记录详情</h4>
+            </div>
+            <div class="modal-body">
+                <div style="margin-top: 15px">
+                    <label style="display: inline-block;font-size: 16px;font-weight: bold;color: #007DCC">用户名:</label>
+                    <span id="name"></span>
+                </div>
+                <div style="margin-top: 15px">
+                    <label style="display: inline-block;font-size: 16px;font-weight: bold;color: #007DCC">发送时间:</label>
+                    <span id="time"></span>
+                </div>
+                <div style="margin-top: 15px">
+                    <label style="display: inline-block;font-size: 16px;font-weight: bold;color: #007DCC">内容:</label>
+                    <span id="content"></span>
+                </div>
+            </div>
+        </div>
+            <div>
+                <div class="input-group col-md-3" style="margin-top:20px;positon:relative">
+                    <label  style="display: inline-block;position: relative;    top: -5px;">用户名:</label>
+                    <input id="user-key" type="text" class="form-control"placeholder="请输入用户名" />
+                    <button style="position: relative;    top: -5px;" class="btn btn-primary" onclick="find()">查找</button>
+                </div>
+                <table class="table table-hover table-bordered" style="margin-top:10px">
+                    <thead >
+                    <tr>
+                        <th>用户名</th>
+                        <th>发送时间</th>
+                        <th>内容</th>
+                        <th>查看内容</th>
+                    </tr>
+                    </thead>
+                    <tbody class="record-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/man-record.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>管理后台</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel='stylesheet' href='/bootstrap.min.css'/>
+    <script src='/jquery.min.js'></script>
+    <script src="/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li><a href="/admin/record">聊天记录管理</a></li>
+            <li><a href="/admin/">用户管理</a></li>
+            <li><a href="/admin/login">退出</a></li>
+        </ul>
+        <h3>用户管理</h3>
+        <div>
+            <!-- 弹出框 -->
+            <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                    <h3>新增房间</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="control-label"  for="chatName" style="display: inline-block">用户名:</label>
+                                <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                            </div>
+                            <div class="form-group">
+                                <label  style="display: inline-block">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <input id="password" type="text" placeholder="请输入密码"></input>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary" onclick="save()">保存</a>
+                </div>
+            </div>
+            <div>
+                <table class="table table-hover table-bordered" style="margin-top: 30px">
+                    <thead >
+                    <tr>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>注册时间</th>
+                        <th>编辑</th>
+                        <th>删除</th>
+                    </tr>
+                    </thead>
+                    <tbody class="user-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/admin.js"></script>
+</body>
+</html>
